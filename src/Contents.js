@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 const Contents = (props) => {
 
-    const data = props.categories;
-
-    console.log(data);
+    const data = props.categories.slice(0, -2);
 
     return (
         <div className="container-fluid">
@@ -16,9 +14,9 @@ const Contents = (props) => {
                         <div className="row">
                             {
                                 data.map(category => (
-                                    <div className="categories col-md-3 p-2" key={category.idCategory}>
+                                    <div className="categories col-md-2 p-2 d-flex justify-content-center" key={category.idCategory}>
                                         <div className="card">
-                                            <Link to="/about">
+                                            <Link className="text-decoration-none" to={`/food-category-list/`} state={{ category: category.strCategory }}>
                                                 <img src={category.strCategoryThumb} className="card-img-top" alt="..." />
                                                 <div className="card-body shadow">
                                                     <h5 className="card-title text-center text-white p-2">{category.strCategory}</h5>

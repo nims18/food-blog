@@ -32,6 +32,10 @@
   font-weight: bold;
 }
 
+.navbar .navbar-text .nav-link:hover {
+  border-bottom: 2px solid #B53471;
+}
+
 .sloganheader {
   font-family: 'Courgette', cursive;
   font-size: xx-large;
@@ -62,6 +66,27 @@
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+.foodlist {
+  color: #B53471;
+}
+
+.notfound {
+  font-family: 'Lato', cursive;
+  font-weight: 700px;
+  font-size: 100px;
+  color: #B53471;
+}
+
+.subfound {
+  font-family: 'Courgette', cursive;
+  font-weight: 700px;
+}
+
+.errorimg {
+  width: 200px;
+  height: 200px;
+}
+
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -73,6 +98,9 @@
   /* Safari */
   animation: spin 2s linear infinite;
 }
+
+
+
 
 /* Safari */
 @-webkit-keyframes spin {

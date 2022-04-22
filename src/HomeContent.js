@@ -1,5 +1,5 @@
 import FetchData from "./FetchData";
-import ErrorMessage from "./ErrorMessage";
+import NotFound from "./NotFound";
 import Contents from "./Contents";
 
 
@@ -10,7 +10,7 @@ const HomeContent = () => {
 
     return (
         <div className="home">
-            {error && <ErrorMessage message={error} />}
+            {error && <NotFound message={error} />}
             {loading && <center><div className="loader"></div></center>}
             {data && <Contents categories={data.categories} />}
         </div>

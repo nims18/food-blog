@@ -12,7 +12,7 @@ const FetchData = (url) => {
             fetch(url)
                 .then(res => {
                     if (!res.ok) { // error coming back from server
-                        throw Error('404 not found!');
+                        throw Error('Could not connect to the resource');
                     }
                     return res.json();
                 })
@@ -27,7 +27,7 @@ const FetchData = (url) => {
                     setError(err.message);
                     setData(null);
                 })
-        }, 1000)
+        }, 100)
     }, [url])
 
 
