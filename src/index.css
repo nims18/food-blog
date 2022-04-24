@@ -66,8 +66,62 @@
   /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
+.foodlist .seebtn {
+  color: white;
+  background-color: #B53471;
+}
+
 .foodlist {
   color: #B53471;
+}
+
+.titleheader2 {
+  text-align: center;
+}
+
+.food .foodlogo {
+  width: 250px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.food {
+  border-bottom: 5px solid black;
+}
+
+.food4 {
+  width: auto;
+  height: 500px;
+}
+
+.side-content h1 {
+  font-family: 'Lato', cursive;
+  font-weight: 700px;
+  font-size: 50px;
+  color: #B53471;
+}
+
+.side-content h5,
+h3 {
+  font-family: 'Courgette', cursive;
+  font-size: xx-large;
+}
+
+.fifty-chars {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.footer {
+  background-color: #B53471;
+  font-family: 'Courgette', cursive;
+  font-size: 20px;
+  font-weight: 100px;
 }
 
 .notfound {

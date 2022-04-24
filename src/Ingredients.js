@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import Footer from "./Footer";
 
+const Ingredients = (props) => {
 
-const CategoryList = (props) => {
-
-    const data = props.meals;
+    const data = props.meals.slice(0, -550);
 
     return (
         <>
@@ -17,10 +17,9 @@ const CategoryList = (props) => {
                                     data.map((category, i) => (
                                         <div className="foodlist col-md-3 p-2" key={i}>
                                             <div className="card">
-                                                <img src={category.strMealThumb} className="card-img-top" alt="..." />
                                                 <div className="card-body shadow">
-                                                    <h5 className="title p-2">{category.strMeal}</h5>
-                                                    <Link className="seebtn form-control text-center text-decoration-none text-white" to="/"><span className="text-center">See More...</span></Link>
+                                                    <h5 className="title p-2">{category.strIngredient}</h5>
+                                                    <h6 className="fifty-chars text-dark">{category.strDescription}</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -31,8 +30,9 @@ const CategoryList = (props) => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
 
-export default CategoryList;
+export default Ingredients;
